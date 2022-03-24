@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rvm/rvm1-ansible.svg?branch=master)](https://travis-ci.org/rvm/rvm1-ansible)
+[![Build Status](https://github.com/rvm/rvm1-ansible/actions/workflows/tests.yml/badge.svg)](https://github.com/rvm/rvm1-ansible/actions/workflows/tests.yml)
 [![OpenCollective](https://opencollective.com/rvm/backers/badge.svg)](#backers)
 [![OpenCollective](https://opencollective.com/rvm/sponsors/badge.svg)](#sponsors)
 [![Ansible Role](https://img.shields.io/badge/role-rvm_io-red)](https://galaxy.ansible.com/rvm/ruby)
@@ -76,7 +76,7 @@ rvm1_rvm_check_for_updates: True
 rvm1_gpg_keys: '409B6B1796C275462A1703113804BB82D39DC0E3'
 
 # The GPG key server
-rvm1_gpg_key_server: 'hkp://pool.sks-keyservers.net'
+rvm1_gpg_key_server: 'hkp://keys.openpgp.org'
 
 # autolib mode, see https://rvm.io/rvm/autolibs
 rvm1_autolib_mode: 3
@@ -170,8 +170,9 @@ Compatibility with Linux distributions based on Debian, Ubuntu or Redhat familie
 
 The continuous integration setup of this project currently covers following platforms:
 - CentOS 6, 7 and 8
-- Debian 8, 9 and 10
-- Ubuntu 14.04, 16.04, 18.04 and 20.04
+- Rocky Linux 8
+- Debian 8, 9, 10 and 11
+- Ubuntu 14.04, 16.04, 18.04, 20.04 and 21.10
 
 ## Ansible galaxy
 

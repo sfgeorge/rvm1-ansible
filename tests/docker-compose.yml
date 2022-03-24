@@ -4,11 +4,14 @@ services:
   centos6:
     build: ./dockerfiles/centos6
     cap_add: [ALL]
+    init: true
   centos7:
     build: ./dockerfiles/centos7
     cap_add: [ALL]
   centos8:
     build: ./dockerfiles/centos8
+  rockylinux8_alt_centos:
+    build: ./dockerfiles/rockylinux8_alt_centos
     cap_add: [ALL]
 
   debian8:
@@ -19,6 +22,9 @@ services:
     cap_add: [ALL]
   debian10:
     build: ./dockerfiles/debian10
+    cap_add: [ALL]
+  debian11:
+    build: ./dockerfiles/debian11
     cap_add: [ALL]
 
   ubuntu14:
@@ -33,3 +39,7 @@ services:
   ubuntu20:
     build: ./dockerfiles/ubuntu20
     cap_add: [ALL]
+  ubuntu21:
+    build: ./dockerfiles/ubuntu21
+    cap_add: [ALL]
+    init: true
