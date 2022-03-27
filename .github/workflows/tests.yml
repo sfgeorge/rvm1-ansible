@@ -45,7 +45,6 @@ jobs:
         uses: docker/bake-action@v1.7.0
         with:
           files: tests/docker-compose.yml
-          push: true
 
       - name: Launch containers
         env:
