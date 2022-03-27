@@ -19,7 +19,8 @@ jobs:
           - root.yml
         group:
           - [centos]
-          - [ubuntu, debian]
+          - [debian]
+          - [ubuntu]
 
     runs-on: ubuntu-latest
 
