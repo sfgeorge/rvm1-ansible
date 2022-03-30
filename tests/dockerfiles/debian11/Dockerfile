@@ -16,4 +16,6 @@ RUN useradd -ms /bin/bash deploy && \
 
 RUN mkdir /data
 
+RUN chown -R deploy /data
+
 CMD ["/lib/systemd/systemd"]
