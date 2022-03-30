@@ -10,7 +10,7 @@
       become: yes
       become_user: deploy
       tags: ruby
-      rvm1_rubies: ["{{rubyversie}}", "{{jrubyversie}}"]
+      rvm1_rubies: ["{{rubyversie}}"]
       rvm1_gpg_key_server: "keyserver.ubuntu.com"
       rvm1_install_flags: '--auto-dotfiles --user-install'
       rvm1_install_path: /data/rvm
