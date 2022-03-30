@@ -11,7 +11,7 @@ RUN apt-get update \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN useradd -ms /bin/bash user && \
-	echo 'user ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+RUN useradd -ms /bin/bash deploy && \
+	echo 'deploy ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 CMD ["/lib/systemd/systemd"]

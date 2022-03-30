@@ -2,22 +2,26 @@
 - name: RVM Single User Setup
   hosts: all
   gather_facts: false
-  remote_user: user
+  remote_user: deploy
   vars:
-    rvm1_user: user
-    rvm1_install_path: '/home/{{ rvm1_user }}/.rvm'
-    rvm1_rubies:
-      - 'ruby-{{ rvm_tests_mri_version_other }}'
-      - 'ruby-{{ rvm_tests_mri_version_default }}'
+    rubyversie:           "2.4.2"
   roles:
     - role: rvm1-ansible
       become: yes
+      become_user: deploy
+      tags: ruby
+      rvm1_rubies: ["{{rubyversie}}", "{{jrubyversie}}"]
+      rvm1_gpg_key_server: "keyserver.ubuntu.com"
+      rvm1_install_flags: '--auto-dotfiles --user-install'
+      rvm1_install_path: /data/rvm
+      rvm1_user: deploy
+      rvm1_rvm_check_for_updates: False
   tags: setup
 
 - name: RVM Setup Validation
   hosts: all
   gather_facts: false
-  remote_user: user
+  remote_user: deploy
   vars:
     rvm1_install_path: '/home/user/.rvm'
   tasks:
