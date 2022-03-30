@@ -18,9 +18,7 @@ jobs:
           - user.yml
           - root.yml
         platform:
-          - centos
           - debian
-          - ubuntu
 
     runs-on: ubuntu-latest
 
