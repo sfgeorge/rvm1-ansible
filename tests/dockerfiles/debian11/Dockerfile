@@ -14,4 +14,6 @@ RUN apt-get update \
 RUN useradd -ms /bin/bash deploy && \
 	echo 'deploy ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
+RUN mkdir /data
+
 CMD ["/lib/systemd/systemd"]
