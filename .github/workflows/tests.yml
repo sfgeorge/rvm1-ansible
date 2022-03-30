@@ -16,7 +16,6 @@ jobs:
       matrix:
         playbook:
           - user.yml
-          - root.yml
         platform:
           - debian
 
