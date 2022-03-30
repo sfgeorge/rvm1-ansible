@@ -23,7 +23,7 @@
   gather_facts: false
   remote_user: deploy
   vars:
-    rvm1_install_path: '/home/user/.rvm'
+    rvm1_install_path: '/data/rvm'
   tasks:
     - import_tasks: assertions.yml
   tags: validate
